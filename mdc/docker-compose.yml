@@ -39,7 +39,7 @@ services:
       # qb下载完成路径
       - /mnt/user/Seeds/NSFW/complete:/downloads/complete
       # qb下载未完成路径
-      - /mnt/user/Seeds/NSFW/complete:/downloads/incomplete
+      - /mnt/user/Seeds/NSFW/incomplete:/downloads/incomplete
 
     environment:
       - WEBUI_PORT=28085
