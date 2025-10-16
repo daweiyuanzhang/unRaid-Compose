@@ -10,7 +10,8 @@ services:
     # 主机名
     volumes:
       -/mnt/user/System/appdata/mdc:/config
-      -/mnt/user/Data/NSFW:/media
+      -/mnt/user/Seeds/qBittorrent:/downloads
+      -/mnt/user/NSFW:/NSFW
     network_mode: bridge
     # 8080端口有别的服务要用，因此使用bridge
     ports:
