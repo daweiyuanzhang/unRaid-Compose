@@ -156,8 +156,8 @@ services:
 
   qbittorrent:
     image: linuxserver/qbittorrent:latest
-    container_name: qbittorrent
-    hostname: qbittorrent
+    container_name: mp-qbittorrent
+    hostname: mp-qbittorrent
     volumes:
       - /mnt/user/System/appdata/MediaCenter/qbittorrent:/config
       # 配置文件目录
@@ -187,8 +187,8 @@ services:
 
   transmission:
     image: linuxserver/transmission:latest
-    container_name: transmission
-    hostname: transmission
+    container_name: mp-transmission
+    hostname: mp-transmission
     volumes:
       - /mnt/user/System/appdata/MediaCenter/transmission:/config
       # 配置文件目录
@@ -228,8 +228,8 @@ services:
 
   moviepilot-v2:
     image: jxxghp/moviepilot-v2:latest
-    container_name: moviepilot-v2
-    hostname: moviepilot-v2
+    container_name: mp-moviepilot-v2
+    hostname: mp-moviepilot-v2
     restart: unless-stopped
     network_mode: host
 
@@ -372,8 +372,8 @@ services:
 
   cookiecloud:
     image: easychen/cookiecloud:latest
-    container_name: cookiecloud
-    hostname: cookiecloud
+    container_name: mp-cookiecloud
+    hostname: mp-cookiecloud
     network_mode: bridge
     ports:
       - 8188:8088/tcp
@@ -391,8 +391,8 @@ services:
 
   iyuuplus:
     image: iyuucn/iyuuplus-dev:latest
-    container_name: iyuuplus
-    hostname: iyuuplus
+    container_name: mp-iyuuplus
+    hostname: mp-iyuuplus
     volumes:
       - /mnt/user/System/appdata/MediaCenter/iyuuplus/iyuu:/iyuu
       # 配置文件目录，存放源码
