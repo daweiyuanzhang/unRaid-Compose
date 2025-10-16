@@ -165,7 +165,7 @@ services:
       # 默认下载目录
 
     environment:
-      - WEBUI_PORT=8085
+      - WEBUI_PORT=18085
       # 自定义WebUI端口
       - TORRENTING_PORT=25800
       # 自定义传输端口，别写6881，看站规！！！
@@ -177,7 +177,7 @@ services:
     restart: unless-stopped
     labels:
       net.unraid.docker.managed: dockerman
-      net.unraid.docker.webui: http://[IP]:[PORT:8085]
+      net.unraid.docker.webui: http://[IP]:[PORT:18085]
       # 适用于unraid界面打开WebUI，注意端口号写的是容器端口，如有自定义，自行修改
       net.unraid.docker.icon: /boot/config/plugins/compose.manager/projects/logos/qbittorrent.png
       # 适用于unraid的图标，可以写unRAID的路径地址，也可以写一个图标地址(局域网或广域网均可)
@@ -214,7 +214,7 @@ services:
     restart: unless-stopped
     labels:
       net.unraid.docker.managed: dockerman
-      net.unraid.docker.webui: http://[IP]:[PORT:9091]
+      net.unraid.docker.webui: http://[IP]:[PORT:19091]
       # 适用于unraid界面打开WebUI，注意端口号写的是容器端口，如有自定义，自行修改
       net.unraid.docker.icon: /boot/config/plugins/compose.manager/projects/logos/transmission.png
       # 适用于unraid的图标，可以写unRAID的路径地址，也可以写一个图标地址(局域网或广域网均可)
@@ -268,6 +268,7 @@ services:
       # 超级管理者用户名，默认为admin，可在MP内修改，初次安装后失效
       # 密码在日志里，只会在第一次部署出现，如果忘记，可以文本形式打开 /config/logs/moviepilot.log 该文件，查看日志获取
       # 如果非初始密码忘记了，得删除pgsql的所有文件，然后重新配置，注意查看，可在MP内修改
+      - SUPERUSER_PASSWORD=102413
 
       - TZ=Asia/Shanghai
       # 时区
