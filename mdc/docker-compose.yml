@@ -37,7 +37,9 @@ services:
       # qb配置路径
       - /mnt/user/System/appdata/nsfw/qbittorrent:/config
       # qb下载完成路径
-      - /mnt/user/Seeds/NSFW/complete:/downloads
+      - /mnt/user/Seeds/NSFW/complete:/downloads/complete
+      # qb下载未完成路径
+      - /mnt/user/Seeds/NSFW/complete:/downloads/incomplete
 
     environment:
       - WEBUI_PORT=28085
