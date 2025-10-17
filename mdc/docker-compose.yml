@@ -15,6 +15,10 @@ services:
       - /mnt/user/Seeds/NSFW/complete:/downloads
       # 刮削结果存放路径
       - /mnt/user/NSFW:/NSFW
+    environment:
+      - PUID=99
+      - PGID=100
+      - UMASK=022
     network_mode: bridge
     ports:
       - 9208:9208
