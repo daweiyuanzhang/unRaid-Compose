@@ -46,8 +46,8 @@ services:
       # 自定义WebUI端口
       - TORRENTING_PORT=15800
       # 自定义传输端口，别写6881，看站规！！！
-      - PUID=0
-      - PGID=0
+      - PUID=99
+      - PGID=100
       - UMASK=022
       - TZ=Asia/Shanghai
     network_mode: host
